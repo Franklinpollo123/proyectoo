@@ -80,13 +80,15 @@ public class SistemaBanco {
                 System.out.println("Fila llena. No se pueden agregar más clientes.");
                 break;
             }
+            boolean esAdultoMayor = scanner.nextBoolean();
+            boolean esEmbarazada = scanner.nextBoolean();
+            boolean conDiscapacidad = scanner.nextBoolean();
+            boolean multiplesAsuntos = scanner.nextBoolean();
+            boolean esPlataforma = scanner.nextBoolean();
+            String input = scanner.next();
+            char caracter = input.charAt(0);
             
-            boolean esAdultoMayor = ThreadLocalRandom.current().nextDouble() < 0.1; 
-            boolean esEmbarazada = !esAdultoMayor && ThreadLocalRandom.current().nextDouble() < 0.1;
-            boolean conDiscapacidad = !esAdultoMayor && !esEmbarazada && ThreadLocalRandom.current().nextDouble() < 0.1;
-            boolean multiplesAsuntos = ThreadLocalRandom.current().nextDouble() < 0.15;
-            boolean esPlataforma = ThreadLocalRandom.current().nextDouble() < 0.2;
-            char genero = ThreadLocalRandom.current().nextBoolean() ? 'F' : 'G';
+            
 
             Cliente nuevoCliente = new Cliente(esAdultoMayor, esEmbarazada, conDiscapacidad, multiplesAsuntos, esPlataforma, genero);
             filaEspera.add(nuevoCliente);
