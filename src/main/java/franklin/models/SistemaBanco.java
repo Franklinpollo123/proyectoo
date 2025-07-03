@@ -14,6 +14,7 @@ public class SistemaBanco {
         PRIORIDADES.put('E', 5); 
         PRIORIDADES.put('F', 6);
         PRIORIDADES.put('G', 7); 
+        //comentario de prueba
     }
 
     private final Queue<Cliente> filaEspera;
