@@ -2,6 +2,7 @@ package franklin.models;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import franklin.models.*;
+import java.util.Scanner;
 
 public class SistemaBanco {
     
@@ -72,9 +73,10 @@ public class SistemaBanco {
     }
 
     private void generarClientes(int cantidad) {
+       Scanner scanner = new Scanner(System.in);
         System.out.println("Generando " + cantidad + " clientes...");
         for (int i = 0; i < cantidad; i++) {
-            if (filaEspera.size() >= 25) { 
+            if (filaEspera.size() >= 10) { 
                 System.out.println("Fila llena. No se pueden agregar más clientes.");
                 break;
             }
